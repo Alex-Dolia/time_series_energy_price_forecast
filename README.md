@@ -1,5 +1,7 @@
 Executing Summary:
 
+In this example, I consider energy price forecast problem using basic Facebook Prophit and Gaussian Processes models.
+
 Data cleaning. Forecast_wind_mw has 4 days of misssing values (06/10/2019 23:00, 07/10/2019 00:00-22:00, 02/02/2020 00:00-23:00, 03/02/2020 00:00-23:00, 28/02/2021 00:00-23:00) I replaced by median for the corresponding hour using previous dates. 
 Forecast_wind_mw has three outliers that I replaced by median as well: <br>
 18/07/2019 02:00,  999999  <br>
