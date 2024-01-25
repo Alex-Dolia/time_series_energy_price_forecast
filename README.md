@@ -18,7 +18,7 @@ We use the following time interval for train, validation and test datasets: <br>
 2) validation, 2020-09-17 19:00:00  2021-02-07 08:00:00; <br>
 3) test, 2021-02-07 09:00:0  2021-06-29 23:00:00. <br>
 
-We use three models: 1) we use the entire training dataset to make one model (let us denote it as GP ALL, see Fig. 1 and Table 1); 2) We use Gaussian Processes in autoregressive manner using 5 previous prices, one model per hour, we denote it as GP SW (see Fig. 2 and Table 1);; 3) Facebook Prophet using only timestamp and price values (see Fig. 3); 4) Facebook Prophet with extra inputs (covariates) selected by forward feature selection algorithm using Mean Relative Absolute Error (MRAE), selected featues: ['season', 'Hour', 'forecast_wind_mw_ORDER_4', 'forecast_wind_mw_std']  (see Fig. 4); 5) Facebook Prophet that uses all features  (see Fig. 5).  
+We use three models: 1) we use the entire training dataset to make one model (let us denote it as GP ALL); 2) We use Gaussian Processes in autoregressive manner using 5 previous prices, one model per hour, we denote it as GP SW; 3) Facebook Prophet using only timestamp and price values; 4) Facebook Prophet with extra inputs (covariates) selected by forward feature selection algorithm using Mean Relative Absolute Error (MRAE), selected featues: ['season', 'Hour', 'forecast_wind_mw_ORDER_4', 'forecast_wind_mw_std']; 5) Facebook Prophet that uses all features.  
 
 It seems GP SW perform better than GP ALL but we have not optimise it performance using different features, kernels and etc.
 
